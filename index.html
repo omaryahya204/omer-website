@@ -8,7 +8,8 @@
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <title>ALKAN</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -40,7 +41,7 @@
     </a>
   </div>
 
-  <!-- Font Awesome -->
+<!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 
@@ -232,79 +233,150 @@
   </section>
   <!-- end audio section -->
   <!-- ===== PROJECTS ===== -->
-  <section id="projects" class="projects-section text-center">
-    <div class="container">
-      <p class="subtitle">POPULAR PROJECTS</p>
-      <h2>Project Types We Excel In</h2>
-      <div class="row mt-5 justify-content-center">
-        <div class="col-md-5 mb-4">
-          <div class="project-card">
-            <img src="img/image1.png" alt="Project1" class="img-fluid rounded-3">
-            <div class="project-info">
-              <h4>Data Centers</h4>
+
+   <section class="projects-slider bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Header and Pagination -->
+      <div class="header-and-pagination flex justify-between items-end mb-8 sm:mb-12">
+        <!-- Titles -->
+        <div>
+          <p class="sub-title">POPULAR PROJECTS</p>
+          <h2 class="main-title">Project Types We Excel In</h2>
+        </div>
+        <!-- Pagination Container (Swiper Dots will be placed here) -->
+        <div class="swiper-pagination custom-pagination-container"></div>
+      </div>
+
+      <!-- Swiper Container -->
+      <div class="swiper mySwiperProjects">
+        <div class="swiper-wrapper">
+
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+
+            <img src="img/image1.png" alt="Data Centers">
+            <div class="slide-info">
+              <h2>Data Centers</h2>
               <p>Business Strategy</p>
             </div>
           </div>
-        </div>
-        <div class="col-md-5 mb-4">
-          <div class="project-card">
-            <img src="img/image2.png" alt="Project2" class="img-fluid rounded-3">
-            <div class="project-info">
-              <h4>Industrial & Manufacturing</h4>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <img src="img/image2.png" alt="Industrial Facilities">
+            <div class="slide-info">
+              <h2>Industrial & Manufacturing Facilities</h2>
+              <p>Supply Chain Optimization</p>
+            </div>
+          </div>
+
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+
+            <img src="img/image1.png" alt="Data Centers">
+            <div class="slide-info">
+              <h2>Data Centers</h2>
               <p>Business Strategy</p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <img src="img/image2.png" alt="Industrial Facilities">
+            <div class="slide-info">
+              <h2>Industrial & Manufacturing Facilities</h2>
+              <p>Supply Chain Optimization</p>
             </div>
           </div>
         </div>
       </div>
+    </div>
+
     </div>
   </section>
   <!-- ======= OUR TRUSTED CLIENTS ======= -->
-  <section class="clients-section">
-    <h2 class="section-title">
-      <span class="line"></span>
-      OUR TRUSTED CLIENTS
-      <span class="line"></span>
-    </h2>
-    <div class="clients-logos">
-      <img src="img/Link (1).png" alt="Client 1">
-      <img src="img/Link (2).png" alt="Client 2">
-      <img src="img/Link (4).png" alt="Client 3">
-      <img src="img/Link (5).png" alt="Client 4">
-      <img src="img/Link (6).png" alt="Client 5">
+  <div class="clients-section">
+    <h2 class="title">OUR TRUSTED CLIENTS</h2>
+
+    <div class="logo-slider">
+      <div class="logos">
+        <img src="img/Link (1).png" alt="">
+        <img src="img/Link (2).png" alt="">
+        <img src="img/Link (4).png" alt="">
+        <img src="img/Link (5).png" alt="">
+        <img src="img/Link (6).png" alt="">
+
+
+        <img src="img/Link (1).png" alt="">
+        <img src="img/Link (2).png" alt="">
+        <img src="img/Link (4).png" alt="">
+        <img src="img/Link (5).png" alt="">
+        <img src="img/Link (6).png" alt="">
+      </div>
     </div>
-  </section>
+  </div>
   <!-- ====== Recent Highlights ====== -->
-  <section class="highlights">
-    <h2>Recent Highlights</h2>
+  <section class="recent-section">
+   
+    <p class="top-label">BLOG & NEWS</p>
+    <h2 class="section-title">Recent Highlights</h2>
 
-    <div class="cards-container">
+    <div class="swiper highlightsSwiper">
+      <div class="swiper-wrapper">
 
-      <div class="card">
-        <h3>Vertiv Appoints ALKAN Construction and Communication Networks as Diamond Partner to Drive ICT Advancements
-          in Egypt</h3>
-        <img src="img/Link.png" alt="highlight">
-        <p>Vertiv, The global leader in critical digital infrastructure and continuity solutions, is pleased to announce
-          the appointment of ALKAN Construction and Communication Networks as a Diamond</p>
+        <div class="swiper-slide highlight-card">
+          <h3 class="highlight-title">Vertiv Appoints ALKAN Construction and Communication Networks...</h3>
+
+          <img src="img/Link.png" alt="" class="highlight-img">
+
+          <p class="highlight-desc">
+            Vertiv, The global leader in critical digital infrastructure and continuity solutions,
+            is pleased to announce the appointment of ALKAN Construction and Communication Networks as a Diamond
+            Partner.
+          </p>
+        </div>
+
+        <div class="swiper-slide highlight-card">
+          <h3 class="highlight-title">Vertiv Appoints ALKAN Construction and Communication Networks...</h3>
+
+          <img src="img/link-3.png" alt="" class="highlight-img">
+
+          <p class="highlight-desc">
+            Vertiv, The global leader in critical digital infrastructure and continuity solutions,
+            is pleased to announce the appointment of ALKAN Construction and Communication Networks as a Diamond
+            Partner.
+          </p>
+        </div>
+
+        <div class="swiper-slide highlight-card">
+          <h3 class="highlight-title">Vertiv Appoints ALKAN Construction and Communication Networks...</h3>
+
+          <img src="img/Link.png" alt="" class="highlight-img">
+
+          <p class="highlight-desc">
+            Vertiv, The global leader in critical digital infrastructure and continuity solutions,
+            is pleased to announce the appointment of ALKAN Construction and Communication Networks as a Diamond
+            Partner.
+          </p>
+        </div>
+        <div class="swiper-slide highlight-card">
+          <h3 class="highlight-title">Vertiv Appoints ALKAN Construction and Communication Networks...</h3>
+
+          <img src="img/link-3.png" alt="" class="highlight-img">
+
+          <p class="highlight-desc">
+            Vertiv, The global leader in critical digital infrastructure and continuity solutions,
+            is pleased to announce the appointment of ALKAN Construction and Communication Networks as a Diamond
+            Partner.
+          </p>
+        </div>
       </div>
-
-      <div class="card">
-        <h3>Vertiv Appoints ALKAN Construction and Communication Networks as Diamond Partner to Drive ICT Advancements
-          in Egypt</h3>
-        <img src="img/link-3.png" alt="highlight">
-        <p>Vertiv, The global leader in critical digital infrastructure and continuity solutions, is pleased to announce
-          the appointment of ALKAN Construction and Communication Networks as a Diamond</p>
-      </div>
-
-      <div class="card">
-        <h3>Vertiv Appoints ALKAN Construction and Communication Networks as Diamond Partner to Drive ICT Advancements
-          in Egypt</h3>
-        <img src="img/Link.png" alt="highlight">
-        <p>Vertiv, The global leader in critical digital infrastructure and continuity solutions, is pleased to announce
-          the appointment of ALKAN Construction and Communication Networks as a Diamond</p>
-      </div>
-
+      <div class="swiper-pagination highlights-pagination"></div>
     </div>
   </section>
+
+
 
   <!-- ===== Our Offices Section ===== -->
   <section class="offices-section">
@@ -388,6 +460,9 @@
         </div>
         <p>Note: We do not publish your email</p>
       </div>
+     
+     <button id="scrollTopBtn">↑</button>
+
       <hr class="footer-line">
       <div class="footer-bottom">
         <p class="footer-text">Intrazero - All rights reserved © 2024 Alkan Construction & Communication Networks</p>
@@ -399,11 +474,9 @@
     </div>
   </footer>
   <!-- links js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
 
 </body>
 
