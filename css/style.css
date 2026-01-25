@@ -82,7 +82,7 @@
 /* ===== RESPONSIVE ===== */
 @media (max-width: 992px) {
 
-  /* تابلت */
+  /*tablet*/
   .carousel-item img {
     height: 80vh;
   }
@@ -102,7 +102,7 @@
 
 @media (max-width: 768px) {
 
-  /* موبايل متوسط */
+  /* mobile*/
   .carousel-item img {
     height: 60vh;
   }
@@ -122,7 +122,7 @@
 
 @media (max-width: 480px) {
 
-  /* موبايل صغير */
+  /* small mobile*/
   .carousel-item img {
     height: 50vh;
   }
@@ -277,11 +277,26 @@ body {
   }
 }
 
+/* Animation Start State */
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: .50s ease;
+}
+
+/* Animation Active State */
+.animate.show {
+  opacity: 4;
+  transform: translateY(0);
+}
+
+
+
 /* ========== START SECTION 2 ========== */
 .stats {
   position: relative;
-  background-image: url("../img/background-1.png");
-  /* ✅ Fixed path (removed / from start) */
+  background-image: url("../img/background-1.png"); 
+  
   padding: 80px 0;
   background-size: cover;
   background-position: center;
@@ -402,9 +417,9 @@ body {
   position: relative;
   padding: 120px 0;
   background-image: url("../img/Frame31.png");
-  /* ضع مسار الصورة هنا */
+  width: 100%;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
   z-index: 1;
 }
@@ -496,6 +511,31 @@ body {
     max-width: 400px;
   }
 }
+
+@media (max-width: 576px) {
+  .why-choose {
+  width: 100%;
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+}
+
+
+
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: .50s ease;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
 
 /* start section audio */
 .hero {
@@ -629,7 +669,7 @@ body {
 
   /* Mobile */
   .hero {
-    height: 40vh;
+    height: 80vh;
     padding: 50px 0;
   }
 
@@ -661,7 +701,7 @@ body {
 
   /* Small phones */
   .hero {
-    height: 35vh;
+    height: 50vh;
   }
 
   .hero h1 {
@@ -688,6 +728,25 @@ body {
   }
 }
 
+
+/* ====== Fade Up Animation ====== */
+.fade-hero {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.fade-hero.active-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation delay */
+.fade-delay-1 { transition-delay: 0.2s; }
+.fade-delay-2 { transition-delay: 0.4s; }
+
+
+/* project section */
 .projects-slider {
     padding: 8rem 0;
     background-image: url('../img/background-6.png');
@@ -794,6 +853,19 @@ body {
     line-height: 1.1;
 }
 
+/* ====== Fade-Up Animation ====== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease;
+}
+
+.fade-up.active-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .projects-slider {
@@ -819,6 +891,11 @@ body {
         justify-content: flex-start; 
     }
 }
+
+
+
+
+
 /* ====== Section Container ====== */
 .clients-section {
   text-align: center;
@@ -884,6 +961,9 @@ body {
   opacity: 1;
 }
 
+
+
+
 /* Animation */
 @keyframes slide {
   0% {
@@ -927,6 +1007,26 @@ body {
   }
 
 }
+
+/* ===== Fade Animation ===== */
+.fade-clients {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease-out;
+}
+
+
+.fade-clients.active-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.logos img {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 
 /* ===== RECENT HIGHLIGHTS SLIDER ===== */
 .recent-section {
@@ -1035,6 +1135,28 @@ padding-bottom: 120px;
     .highlight-desc { font-size: 14px; min-height: auto; }
     .recent-section::before { font-size: 120px; top: 0; }
 }
+
+/* Fade animation system */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay classes */
+.fade-delay-1 { transition-delay: 0.2s; }
+.fade-delay-2 { transition-delay: 0.4s; }
+.fade-delay-3 { transition-delay: 0.6s; }
+.fade-delay-4 { transition-delay: 0.8s; }
+.fade-delay-5 { transition-delay: 1s; }
+
+
+
 
 /* ===== Our Offices Section ===== */
 .offices-section {
@@ -1388,4 +1510,16 @@ padding-bottom: 120px;
   cursor: pointer;
   display: none;
   z-index: 999;
+}
+  
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-section.active {
+  opacity: 1;
+  transform: translateY(0);
 }

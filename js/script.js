@@ -124,3 +124,141 @@ scrollTopBtn.addEventListener("click", () => {
   });
 });
 
+// section 2
+
+const animatedElements = document.querySelectorAll('.animate');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+animatedElements.forEach(el => sectionObserver.observe(el));
+
+
+
+// section3 
+
+
+const whyChooseElements = document.querySelectorAll('.animate');
+
+const whyChooseObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+whyChooseElements.forEach(el => whyChooseObserver.observe(el));
+
+
+
+// === Hero Section Animation ===
+
+// اختار كل عناصر الهيرو اللي عليها الأنيميشن
+const heroElements = document.querySelectorAll('.fade-hero');
+
+const heroObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active-anim');
+        }
+    });
+}, { threshold: 0.2 });
+
+heroElements.forEach(el => heroObserver.observe(el));
+
+
+// project section
+
+
+
+const animateSections = document.querySelectorAll('.fade-up');
+
+
+const sectionRevealObserver2 = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active-anim');
+        }
+    });
+}, { threshold: 0.2 });
+
+
+animateSections.forEach(section => {
+    sectionRevealObserver2.observe(section);
+});
+
+
+// clients-section
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeElements = document.querySelectorAll(".fade-clients");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active-anim");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.2
+    }
+  );
+
+  fadeElements.forEach((el) => observer.observe(el));
+});
+
+
+
+
+
+// Global fade observer
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    } else {
+      entry.target.classList.remove("active"); 
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.fade-section').forEach((el) => {
+  fadeObserver.observe(el);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Fade-up animation global observer
+const sectionFadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    } else {
+      entry.target.classList.remove("active"); // عشان لما ترفع الصفحة يختفي تاني
+    }
+  });
+}, { threshold: 0.2 });
+
+// Apply on all sections with fade-section class
+document.querySelectorAll(".fade-section").forEach(section => {
+  sectionFadeObserver.observe(section);
+});
+
